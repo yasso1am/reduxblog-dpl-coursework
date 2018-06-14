@@ -1,5 +1,10 @@
 const ADD_BLOG = 'ADD_BLOG'
 const TOGGLE_BLOG = 'TOGGLE_BLOG'
+const DELETE_BLOG = 'DELETE_BLOG'
+
+export const deleteBlog = (id) => {
+  return { type: DELETE_BLOG, id }
+}
 
 export const addBlog = (blog) => {
   return { type: ADD_BLOG, blog }
@@ -19,6 +24,8 @@ export default ( state = [], action ) => {
         return {...blog, draft: !blog.draft}
         return blog
       })
+    case DELETE_BLOG:
+      return state.filter( blog => blog.id !== action.id )
       default:
         return state
   }

@@ -29,29 +29,43 @@ class BlogForm extends React.Component{
     const { title, content, author } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="row col s12">
-        <input className="col s8"
+        <div className="center row col s12">
+        <div className="col s2"></div>
+        <input className="center col s8"
           name="title"
           placeholder="Title"
           value={title}
           onChange={this.handleChange}
           required
         />
-        <input className="col s8"
+        <div className="col s2"></div>
+        </div>
+        <div className="center row col s12">
+        <div className="col s2"></div>
+        <input className="center col s8"
+          name="author"
+          placeholder="Author"
+          value={author}
+          onChange={this.handleChange}
+          required
+        />
+        <div className="col s2"></div>
+        </div>
+        <div className="center row col s12">
+        <div className="col s2"></div>
+        <input className="center col s8"
           name="content"
           placeholder="Blog Content"
           value={content}
           onChange={this.handleChange}
           required
         />
-        <input className="col s8"
-          name="author"
-          placeholder="Autor"
-          value={author}
-          onChange={this.handleChange}
-          required
-        />
-        <button className="btn">Submit</button>
+        <div className="col s2"></div>
+        </div>
+        <div className="center row col s12">
+        <div className="col s4"></div>
+        <button className="btn col s4 center">Submit</button>
+        <div className="col s4"></div>
         </div>
       </form>
     )

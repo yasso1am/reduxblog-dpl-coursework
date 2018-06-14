@@ -6,6 +6,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 const App = () => (
   <div>
+  <h1 className="center"> Write some shit here</h1>
+  <hr />
     <BlogForm />
     <BlogList />
   </div>
